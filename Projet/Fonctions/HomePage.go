@@ -1,6 +1,7 @@
 package Fonctions
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 )
@@ -27,4 +28,5 @@ func HomePageGet(w http.ResponseWriter, r *http.Request) {
 
 func HomePagePost(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/HomePage", http.StatusSeeOther)
+	fmt.Println("")
 }
